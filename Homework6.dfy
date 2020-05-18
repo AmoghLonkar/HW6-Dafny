@@ -3,7 +3,10 @@ datatype List<T> = Nil | Cons(T, List<T>)
 
 function flatten<T>(tree:Tree<T>):List<T>
 {
-	
+
+	match tree
+    case Leaf => Nil
+    case Node(leftTree, rightTree, root) => append(flatten(leftTree), Cons(root, flatten(rightTree)))
 }
 
 function append<T>(xs:List<T>, ys:List<T>):List<T>
