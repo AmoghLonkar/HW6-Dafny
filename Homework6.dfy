@@ -8,7 +8,9 @@ function flatten<T>(tree:Tree<T>):List<T>
 
 function append<T>(xs:List<T>, ys:List<T>):List<T>
 {
-	
+	match xs
+    case Nil => ys
+    case Cons(x, xs') => Cons(x, append(xs', ys))
 }
 
 function treeContains<T>(tree:Tree<T>, element:T):bool
