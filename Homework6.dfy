@@ -18,7 +18,9 @@ function treeContains<T>(tree:Tree<T>, element:T):bool
 
 function listContains<T>(xs:List<T>, element:T):bool
 {
-	
+	match xs
+    case Nil => false
+    case Cons(x, xs') => (x == element) || listContains(xs', element)
 }
 
 
