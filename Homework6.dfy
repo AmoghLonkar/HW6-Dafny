@@ -15,7 +15,9 @@ function append<T>(xs:List<T>, ys:List<T>):List<T>
 
 function treeContains<T>(tree:Tree<T>, element:T):bool
 {
-	
+	match tree
+    case Leaf => false
+    case Node(leftTree, rightTree, root) => treeContains(leftTree, element) || treeContains(rightTree, element)
 }
 
 function listContains<T>(xs:List<T>, element:T):bool
