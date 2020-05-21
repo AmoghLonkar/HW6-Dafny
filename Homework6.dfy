@@ -32,7 +32,7 @@ function listContains<T>(xs:List<T>, element:T):bool
 
 //Based on memberOfAppend from 12May20 lecture example
 ghost method memberOfList<T>(xs:List<T>, ys:List<T>, element: T)
-ensures listContains(append(xs,ys), element) == ( listContains(xs, element)  ||  listContains(ys, element) )
+ensures ( listContains(xs, element)  ||  listContains(ys, element) ) <==> listContains(append(xs,ys), element)
 {
     match xs
     case Nil => {}
@@ -73,7 +73,8 @@ ensures treeContains(tree, element) <==> listContains(flatten(tree), element)
             == (root == element) || treeContains(leftTree, element) || treeContains(rightTree, element);
             == treeContains(leftTree, element) || listContains(Cons(root, flatten(rightTree)), element);
             == listContains(flatten(leftTree), element) || listContains(Cons(root, flatten(rightTree)), element);
-            == listContains(append(flatten(leftTree), Cons(root, flatten(rightTree))), element);
+            == { memberOfList(flatten(leftTree), Cons(root, flatten(rightTree)), element); }
+               listContains(append(flatten(leftTree), Cons(root, flatten(rightTree))), element);
             == listContains(flatten(Node(leftTree, rightTree, root)), element);
             == listContains(flatten(tree), element);
         } 
