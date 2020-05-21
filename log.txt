@@ -1,0 +1,41 @@
+commit fe39022a505fb6c9aa70b6dcda9e6062ce2f5892
+Author: AmoghLonkar <alonkar@ucsc.edu>
+Date:   Wed May 20 22:51:46 2020 -0700
+
+    Works!
+
+commit 213952433013cc4529e0ecda2d10757d5546e734
+Author: AmoghLonkar <alonkar@ucsc.edu>
+Date:   Wed May 20 21:28:11 2020 -0700
+
+    Added ghost method and code for sameElements
+
+commit 32e2701b783fa3c56f3f1b6ec42383a12b3a07a5
+Author: AmoghLonkar <alonkar@ucsc.edu>
+Date:   Sun May 17 17:55:52 2020 -0700
+
+    Added code for flatten
+
+commit 9bfa785a2a9f030cd428bf2d9134ea1e04a1a97c
+Author: AmoghLonkar <alonkar@ucsc.edu>
+Date:   Sun May 17 17:39:53 2020 -0700
+
+    Added code for treeContains function
+
+commit fcce8ae1851696519752d9e49356ac5f08981216
+Author: AmoghLonkar <alonkar@ucsc.edu>
+Date:   Sun May 17 17:28:53 2020 -0700
+
+    Added code for append function
+
+commit 070c2c47132fb6a881b034ffbc49828440f9e735
+Author: AmoghLonkar <alonkar@ucsc.edu>
+Date:   Sun May 17 17:25:53 2020 -0700
+
+    Wrote listContains based on lecture 12May20 example
+
+commit fc39f2f1cb664afed94d247812b8eb9e49d58e91
+Author: Amogh Lonkar <35778429+AmoghLonkar@users.noreply.github.com>
+Date:   Sun May 17 15:23:36 2020 -0700
+
+    Initial Commit
